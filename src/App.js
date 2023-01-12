@@ -15,22 +15,22 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/index/*" element=
+        <Route exact path="./" element=
           {
             <MainRoute />
           }
         ></Route>
-        <Route path="/coffee/*" element=
+        <Route path="./coffee/:id" element=
           {
             <CoffeeRoute />
           }
         ></Route>
-        <Route path="/food/*" element=
+        <Route path="./food/:id" element=
           {
             <FoodRoute />
           }
         ></Route>
-        <Route path="/etc/*" element=
+        <Route path="./etc/:id" element=
           {
             <EtcRoute />
           }
