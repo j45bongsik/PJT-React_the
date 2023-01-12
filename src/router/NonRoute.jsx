@@ -62,7 +62,7 @@ const NonRoute = (props) => {
                     ></Lottie01>
                     <BtnArea>
 
-                        <BasicButton.PrevBtn onClick={() => navigate(-1)}>
+                        <BasicButton.PrevBtn onClick={() => navigate('/')}>
                             이전 페이지
                         </BasicButton.PrevBtn>
                     </BtnArea>
