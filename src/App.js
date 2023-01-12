@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element=
+        <Route path="/index/*" element=
           {
             <MainRoute />
           }
