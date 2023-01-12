@@ -1,0 +1,23 @@
+import React from 'react';
+// import Kakao from '../components/contents/Kakao'
+import Kakao from '../components/contents/Kakao'
+// import { ContStyle } from '../styles/Contents';
+import { ContStyle } from '../styles/Contents';
+import Header from '../components/header/Header'
+
+
+const MainRoute = (props) => {
+    
+
+    return (
+        <>
+            <Header></Header>
+            <ContStyle.contArea>
+                <Kakao />
+            </ContStyle.contArea>
+        </>
+    ) 
+
+}
+
+export default MainRoute;

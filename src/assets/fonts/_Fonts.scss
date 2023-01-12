@@ -1,0 +1,41 @@
+@charset 'utf-8';
+
+@font-face {
+  font-family: 'Noto Sans Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./notoSans/eot/NotoSansKR-Light-Hestia.eot);
+  src: url(./notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
+
+}
+
+@font-face {
+  font-family: 'Noto Sans DemLight';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./notoSans/eot/NotoSansKR-DemiLight-Hestia.eot);
+  src: url(./notoSans/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format("embedded-opentype"), url(./notoSans/woff/NotoSansKR-DemiLight-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./notoSans/eot/NotoSansKR-Regular-Hestia.eot);
+  src: url(./notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./notoSans/eot/NotoSansKR-Medium-Hestia.eot);
+  src: url(./notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
+}
+
+:root {
+  --font-NotoSans: "Noto Sans Light";
+  --font-NotoSansDemLight: "Noto Sans DemLight";
+  --font-NotoSans: "Noto Sans";
+  --font-NotoSansMedium: "Noto Sans Medium";
+}
