@@ -54,3 +54,48 @@ li{list-style: none;}
     border-radius: 10px;
   }
 }
+
+// 노치대응
+// 테스트용 safe area 변수 (값이 0일때는 0% 또는 0px 사용)
+// $safeAreaMap: ("top": 44px, "right": 0%, "bottom": 34px, "left": 0%);
+$safeAreaMap: (
+    "top": env(safe-area-inset-top), 
+    "right": env(safe-area-inset-right),
+    "bottom": env(safe-area-inset-bottom), 
+    "left": env(safe-area-inset-left)
+);
+
+$safe-top: map-get($safeAreaMap,"top");
+$safe-right: map-get($safeAreaMap,"right");
+$safe-bottom: map-get($safeAreaMap,"bottom");
+$safe-left: map-get($safeAreaMap,"left");
+
+/**
+ * safe-area-inset 처리
+ * $dir - 방향(all, top, right, bottom, left, 생략가능)
+ * $value - 더해질 값(생략가능)
+ */
+@function safe($dir: all, $value: 0) {
+	@if ($dir == all) {
+		@if ($value > 0) {
+			@return calc(#{$value} + #{map-get($safeAreaMap,"top")}) calc(#{$value} + #{map-get($safeAreaMap,"right")}) calc(#{$value} + #{map-get($safeAreaMap,"bottom")}) calc(#{$value} + #{map-get($safeAreaMap,"left")});
+		}
+		@else if ($value < 0) {
+			@return calc((#{-$value} + #{map-get($safeAreaMap,"top")}) * -1) calc((#{-$value} + #{map-get($safeAreaMap,"right")}) * -1) calc((#{-$value} + #{map-get($safeAreaMap,"bottom")}) * -1) calc((#{-$value} + #{map-get($safeAreaMap,"left")}) * -1);
+		}
+		@else {
+			@return map-get($safeAreaMap,"top") map-get($safeAreaMap,"right") map-get($safeAreaMap,"bottom") map-get($safeAreaMap,"left");
+		}
+	}
+	@else {
+		@if ($value > 0) {
+			@return calc(#{$value} + #{map-get($safeAreaMap,$dir)});
+		}
+		@else if ($value< 0) {
+			@return calc((#{-$value} + #{map-get($safeAreaMap,$dir)}) * -1);
+		}
+		@else {
+			@return map-get($safeAreaMap,$dir);
+		}
+	}
+}

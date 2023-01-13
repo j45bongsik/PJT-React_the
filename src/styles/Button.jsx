@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import UserIco from '../assets/images/ico-user.png'
 import LogoutIco from '../assets/images/ico-logout.png'
+import '../assets/fonts/_Fonts.scss'
+
 
 
 export const BtnArea = styled.article `

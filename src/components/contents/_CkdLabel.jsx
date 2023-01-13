@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { CheckStyle } from '../../styles/Form';
-// import myData from '../../data.json'
-import styled from 'styled-components';
-
 
 
 const CkdLabel = ({id, label, checked, type, name, onChange}) => {
@@ -14,9 +11,6 @@ const CkdLabel = ({id, label, checked, type, name, onChange}) => {
             <CheckStyle.checkLabel htmlFor={id} className={require ? 'req' : undefined}>{label}</CheckStyle.checkLabel>
         </CheckStyle.checkArea>
                 
-
-        
-
     )
 };
 

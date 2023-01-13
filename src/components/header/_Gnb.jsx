@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { GnbStyle } from '../../styles/Gnb';
-// import myData from '../../data.json'
-import styled from 'styled-components';
-
 import { useNavigate } from 'react-router-dom'
 
 

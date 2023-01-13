@@ -1,8 +1,7 @@
 import React from 'react';
-import Logo from './Logo';
-import Gnb from './Gnb';
-import Util from './Util';
-// import myData from '../../data.json'
+import Logo from './_Logo';
+import Gnb from './_Gnb';
+import Util from './_Util';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 

@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { KakaoStyle } from '../../styles/Kakao';
 import { InputArea, CheckStyle } from '../../styles/Form';
-// import myData from '../../data.json'
-import styled from 'styled-components';
-import CkdLabel from './CkdLabel'
+import CkdLabel from './_CkdLabel'
 
 const { kakao } = window;
-
 
 const Kakao = ((props) => {
 
@@ -67,7 +64,12 @@ const Kakao = ((props) => {
             
             // 지도 중심좌표를 접속위치로 변경합니다
             map.setCenter(locPosition);      
-        }    
+        }
+        
+        
+        
+
+
         
     },[])
 
@@ -84,7 +86,9 @@ const Kakao = ((props) => {
                 </InputArea>
             </KakaoStyle.mapHeader>
             <KakaoStyle.mapCont>
+
                 <div id="map"></div>
+                
             </KakaoStyle.mapCont>
         </KakaoStyle.mapArea>
 

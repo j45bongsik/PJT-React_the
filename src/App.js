@@ -1,5 +1,5 @@
 import './_Reset.scss';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainRoute from './router/MainRoute'
 import CoffeeRoute from './router/CoffeeRoute'
 import FoodRoute from './router/FoodRoute'
@@ -14,33 +14,35 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route exact path="./" element=
-          {
-            <MainRoute />
-          }
-        ></Route>
-        <Route path="./coffee/:id" element=
-          {
-            <CoffeeRoute />
-          }
-        ></Route>
-        <Route path="./food/:id" element=
-          {
-            <FoodRoute />
-          }
-        ></Route>
-        <Route path="./etc/:id" element=
-          {
-            <EtcRoute />
-          }
-        ></Route>
-        <Route path="*" element=
-          {
-            <NonRoute />
-          }
-        ></Route>
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element=
+            {
+              <MainRoute />
+            }
+          ></Route>
+          <Route path="/coffee/*" element=
+            {
+              <CoffeeRoute />
+            }
+          ></Route>
+          <Route path="/food/*" element=
+            {
+              <FoodRoute />
+            }
+          ></Route>
+          <Route path="/etc/*" element=
+            {
+              <EtcRoute />
+            }
+          ></Route>
+          <Route path="*" element=
+            {
+              <NonRoute />
+            }
+          ></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

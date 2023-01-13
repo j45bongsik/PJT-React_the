@@ -14,7 +14,7 @@ export const NonStyle = {
     PageHead:styled.div `
         width: 100%;
         margin-top: auto;
-        margin-bottom: 0
+        margin-bottom: 0;
     `,
     Title:styled.h2 `
         font-family: var(--font-NotoSans);
