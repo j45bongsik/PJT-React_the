@@ -13,7 +13,7 @@ const MainRoute = (props) => {
         <>
             <Header></Header>
             <ContStyle.contArea>
-                <Kakao />
+                {/* <Kakao /> */}
             </ContStyle.contArea>
         </>
     ) 

@@ -13,7 +13,7 @@ const NonRoute = (props) => {
         <>
             <Header></Header>
             <ContStyle.contArea>
-                <Kakao />
+                {/* <Kakao /> */}
             </ContStyle.contArea>
         </>
     ) 
