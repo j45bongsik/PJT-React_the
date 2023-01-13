@@ -7,9 +7,6 @@ import EtcRoute from './router/EtcRoute'
 import NonRoute from './router/NonRoute'
 
 
-
-
-
 function App() {
 
   return (
