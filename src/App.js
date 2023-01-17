@@ -5,6 +5,7 @@ import CoffeeRoute from './router/CoffeeRoute'
 import FoodRoute from './router/FoodRoute'
 import EtcRoute from './router/EtcRoute'
 import NonRoute from './router/NonRoute'
+import Detail from './components/contents/_CardDetail'
 
 
 function App() {
@@ -36,6 +37,12 @@ function App() {
           <Route path="*" element=
             {
               <NonRoute />
+            }
+          ></Route>
+
+          <Route path="/detail/:id" element=
+            {
+              <Detail />
             }
           ></Route>
         </Routes>

@@ -6,11 +6,12 @@ export const InputArea = styled.article `
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
+    height: 100%;
 `
 
 export const CheckStyle = {
     checkArea:styled.div `
+        display: flex; justify-content: flex-start; align-items: flex-end;
         &:not(last-child) {
             margin-right: 10px;
         }

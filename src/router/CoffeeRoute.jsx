@@ -6,6 +6,7 @@ import Lnb from '../components/contents/_Lnb'
 const CoffeeRoute = () => {
     
     const [lnbList] = LNB_LIST();
+
     return (
         <>
         <Header />

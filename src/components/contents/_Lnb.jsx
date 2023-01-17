@@ -6,6 +6,8 @@ import styled from 'styled-components';
 const Lnb = (({list},props) => {
 
     let [label, setLabel] = useState(false);
+
+    console.log(list)
     
     return (
         
