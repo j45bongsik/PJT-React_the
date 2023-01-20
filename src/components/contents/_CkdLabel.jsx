@@ -8,7 +8,7 @@ const CkdLabel = ({id, label, checked, type, name, onChange}) => {
 
         <CheckStyle.checkArea>
             <CheckStyle.checkInput type={type ? type : 'checkbox'} id={id} name={name} checked={checked} onChange={onChange}></CheckStyle.checkInput>
-            <CheckStyle.checkLabel htmlFor={id} className={require ? 'req' : undefined}>{label}</CheckStyle.checkLabel>
+            <CheckStyle.checkLabel htmlFor={id}>{label}</CheckStyle.checkLabel>
         </CheckStyle.checkArea>
                 
     )

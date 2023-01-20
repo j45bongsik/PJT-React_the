@@ -36,11 +36,11 @@ const Card = ({ matche },props) => {
 
 
                     {
-                        imgList[0].map(({alt, src, name, id},index) => {
+                        imgList[0].map(({id, alt, src, name, link, key},index) => {
                             return (
 
-                                <CardStyle.cardItem key={index}>
-                                        <CardStyle.cardLink href={('/detail/' + id)}>
+                                <CardStyle.cardItem key={id}>
+                                        <CardStyle.cardLink to={('/detail/' + id)}>
                                             <CardStyle.cardFigure>
                                                 <img src={src} alt={alt} />
                                                 <figcaption className="elips">

@@ -3,7 +3,7 @@ import Logo from './_Logo';
 import Gnb from './_Gnb';
 import Util from './_Util';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 const HeaderStyle = {
     Wrap:styled.header `
@@ -30,21 +30,25 @@ const HeaderStyle = {
     `,
 }
 
-const Header = ((props) => {
+const Header = (props) => {
 
-    let navigate = useNavigate();
-
+    
     return (
-        <HeaderStyle.Wrap navigate={navigate}>
-            <HeaderStyle.Outer>
-                <HeaderStyle.Inner>
-                    <Logo />
-                    <Gnb />
-                    <Util />
-                </HeaderStyle.Inner>
-            </HeaderStyle.Outer>
-        </HeaderStyle.Wrap>
+        <>
+            <HeaderStyle.Wrap>
+                <HeaderStyle.Outer>
+                    <HeaderStyle.Inner>
+                        <Logo />
+                        <Gnb />
+                        <Util />
+                    </HeaderStyle.Inner>
+                </HeaderStyle.Outer>
+            </HeaderStyle.Wrap>
+            
+            <Outlet></Outlet>
+
+        </>
     )
-})
+}
 
 export default Header;

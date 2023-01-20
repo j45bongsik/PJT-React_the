@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { LnbStyle } from '../../styles/Lnb';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { LNB_LIST } from '../../utils/common'
 
-
-const Lnb = (({list},props) => {
+const Lnb = (props) => {
 
     let [label, setLabel] = useState(false);
 
-    console.log(list)
+    const [lnbList] = LNB_LIST()
+
+    console.log(lnbList[0])
+
     
     return (
         
@@ -16,14 +20,24 @@ const Lnb = (({list},props) => {
                 <LnbStyle.LnbList className="cScrollY">
                     
                     {
-                        list.listItem.map((i,index) => {
+                        lnbList.map((i, index) => {
+
                             return (
-                                <LnbStyle.LnbItem key={index}>
-                                    <a href={list.link[index]} >{list.listItem[index]}</a>
-                                </LnbStyle.LnbItem>
+                                
+                                i.listItem.map((j, index) => {
+                                    // console.log(j)
+                                    return (
+                                        <LnbStyle.LnbItem key={j}>
+                                            {j}
+                                        {/* <Link to={} /> */}
+                                    </LnbStyle.LnbItem>
+                                    )
+                                
+                                })
                             )
                         })
                     }
+
 
                 </LnbStyle.LnbList>
             </LnbStyle.LnbInner>
@@ -36,7 +50,7 @@ const Lnb = (({list},props) => {
         </LnbStyle.LnbArea>
 
     )
-})
+}
 
 
 export default Lnb;

@@ -20,7 +20,7 @@ export const LogoStyle = {
             &:before {
                 content: ''; position: absolute; left: 0; top: 0;
                 width: 50px; height: 50px;
-                background: url(${logo});
+                /* background: url(${logo}); */
                 background-size: cover;
 
             }

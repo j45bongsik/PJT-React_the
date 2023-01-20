@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
 import { GnbStyle } from '../../styles/Gnb';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { GNB_LIST } from '../../utils/common'
 
 
-const Gnb = ((props) => {
+const Gnb = (props) => {
     
-    let navigate = useNavigate();
+    const [gnbList] = GNB_LIST();
+
+
 
     return (
 
         <GnbStyle.GnbArea>
             <GnbStyle.GnbList>
-                <GnbStyle.GnbItem>
-                    <a href="#" onClick={ () => {
-                        navigate('/coffee')
-                    } }>Coffee</a>
-                </GnbStyle.GnbItem>
-                <GnbStyle.GnbItem>
-                    <a href="#" onClick={ () => {
-                        navigate('/food')
-                    } }>Food</a>
-                </GnbStyle.GnbItem>
-                <GnbStyle.GnbItem>
-                    <a href="#" onClick={ () => {
-                        navigate('/etc')
-                    } }>Etc.</a>
-                </GnbStyle.GnbItem>
+
+                {
+                    gnbList.map(({link, name, id},index) => {
+                        return (
+                            <GnbStyle.GnbItem key={id}>
+                                <Link to={link}>{name}</Link>
+                            </GnbStyle.GnbItem>
+                        )
+                    })
+                    
+                }
+                
             </GnbStyle.GnbList>
         </GnbStyle.GnbArea>
 
 
     )
-})
+}
 
 export default Gnb;

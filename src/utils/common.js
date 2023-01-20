@@ -23,7 +23,8 @@ export const IMG_LIST = () => {
         {id:6, alt: "test07", src: imgInfo07, name: "food7에 대한 설명", link: "/test07", key:"food"  },
         {id:7, alt: "test08", src: imgInfo08, name: "food8에 대한 설명", link: "/test08", key:"food"  },
         {id:8, alt: "test09", src: imgInfo09, name: "etc9에 대한 설명", link: "/test09", key:"etc"  },
-        {id:9, alt: "test10", src: imgInfo10, name: "etc10에 대한 설명", link: "/test10", key:"etc"  }
+        {id:9, alt: "test10", src: imgInfo10, name: "etc10에 대한 설명", link: "/test10", key:"etc"  },
+        {id:10, alt: "test10+", src: imgInfo10, name: "etc10에 대한 설명", link: "/test10", key:"etc"  }
     ]
 
     return [imgList]
@@ -60,8 +61,9 @@ export const GNB_LIST = () => {
 
     let gnbList = [
         {
+            id: 0,
             name: 'coffee',
-            link : 'coffee/01',
+            link : '/coffee/info',
             dep02: [
                 {name: 'dep02-01', link: 'coffee/01'},
                 {name: 'dep02-02', link: 'coffee/02'},
@@ -69,8 +71,9 @@ export const GNB_LIST = () => {
             ]
         },
         {
+            id: 1,
             name: 'food',
-            link : 'food/01',
+            link : '/food/info',
             dep02: [
                 {name: 'dep02-01', link: 'food/01'},
                 {name: 'dep02-02', link: 'food/02'},
@@ -79,8 +82,9 @@ export const GNB_LIST = () => {
             ]
         },
         {
+            id: 2,
             name: 'etc',
-            link : 'etc/01',
+            link : '/etc/info',
             dep02: [
                 {name: 'dep02-01', link: 'etc/01'},
                 {name: 'dep02-02', link: 'etc/02'},
