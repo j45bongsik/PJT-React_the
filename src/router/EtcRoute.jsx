@@ -1,12 +1,14 @@
 import React from 'react';
-import { LNB_LIST } from "../utils/common"
+import { MENU_LIST } from "../utils/common"
 import Lnb from '../components/contents/_Lnb'
 
 const EtcRoute = () => {
     
-    const [lnbList] = LNB_LIST();
+    const [menuList] = MENU_LIST();
+
+    
     return (
-        <Lnb list={lnbList[2]}></Lnb>
+        <Lnb list={menuList[2].lnb}></Lnb>
     ) 
 
 }

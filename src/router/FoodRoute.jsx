@@ -1,12 +1,12 @@
 import React from 'react';
-import { LNB_LIST } from "../utils/common"
+import { MENU_LIST } from "../utils/common"
 import Lnb from '../components/contents/_Lnb'
 
 const FoodRoute = () => {
     
-    const [lnbList] = LNB_LIST();
+    const [menuList] = MENU_LIST();
     return (
-        <Lnb list={lnbList[1]}></Lnb>
+        <Lnb list={menuList[1].lnb}></Lnb>
     ) 
 
 }

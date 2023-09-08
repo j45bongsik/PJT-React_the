@@ -32,34 +32,37 @@ export const IMG_LIST = () => {
 
 
 
-export const LNB_LIST = () => {
+
+
+
+// export const LNB_LIST = () => {
     
-    let lnbList = [
-        {
-            listId: 0,
-            listItem: ["cf00-01","cf00-02","cf00-03"],
-            link: ['coffee/01', 'coffee/02','coffee/03'] 
-        },
-        {
-            listId: 1,
-            listItem: ["fd01-01","fd01-02","fd01-03","fd01-04"],
-            link: ['/fd/01', '/fd/02','/fd/03'] 
-        },
-        {
-            listId: 2,
-            listItem: ["etc02-01","etc02-02","etc02-03","etc02-04","etc02-05"],
-            link: ['/etc/01', '/etc/02','/etc/03'] 
-        },
-    ]
+//     let lnbList = [
+//         {
+//             listId: 0,
+//             listItem: ["cf00-01","cf00-02","cf00-03"],
+//             link: ['coffee/01', 'coffee/02','coffee/03'] 
+//         },
+//         {
+//             listId: 1,
+//             listItem: ["fd01-01","fd01-02","fd01-03","fd01-04"],
+//             link: ['/fd/01', '/fd/02','/fd/03'] 
+//         },
+//         {
+//             listId: 2,
+//             listItem: ["etc02-01","etc02-02","etc02-03","etc02-04","etc02-05"],
+//             link: ['/etc/01', '/etc/02','/etc/03'] 
+//         },
+//     ]
 
-    return [lnbList]
+//     return [lnbList]
 
-}
+// }
     
 
-export const GNB_LIST = () => {
+export const MENU_LIST = () => {
 
-    let gnbList = [
+    let menuList = [
         {
             id: 0,
             name: 'coffee',
@@ -68,6 +71,12 @@ export const GNB_LIST = () => {
                 {name: 'dep02-01', link: 'coffee/01'},
                 {name: 'dep02-02', link: 'coffee/02'},
                 {name: 'dep02-03', link: 'coffee/03'}
+            ],
+            lnb: [
+                {
+                    lnbItem: ["cf01", "cf02", "cf03"], 
+                    lnbLink: ["coffee/01", "coffee/02", "coffee/03"]
+                }
             ]
         },
         {
@@ -79,6 +88,12 @@ export const GNB_LIST = () => {
                 {name: 'dep02-02', link: 'food/02'},
                 {name: 'dep02-03', link: 'food/03'},
                 {name: 'dep02-04', link: 'food/04'}
+            ],
+            lnb: [
+                {
+                    lnbItem: ["fd01", "fd02", "fd03", "fd04"], 
+                    lnbLink: ["food/01", "food/02", "food/03", "food/04"]
+                }
             ]
         },
         {
@@ -90,11 +105,18 @@ export const GNB_LIST = () => {
                 {name: 'dep02-02', link: 'etc/02'},
                 {name: 'dep02-03', link: 'etc/03'},
                 {name: 'dep02-04', link: 'etc/04'}
+            ],
+            lnb: [
+                {
+                    lnbItem: ["etc01", "etc02", "etc03", "etc04", "etc05"], 
+                    lnbLink: ["etc/01", "etc/02", "etc/03", "etc/04", "etc/05"]
+                }
             ]
+            
         },
     ]
 
-    return [gnbList]
+    return [menuList]
 
 }
 

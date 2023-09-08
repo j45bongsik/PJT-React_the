@@ -1,43 +1,34 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { LnbStyle } from '../../styles/Lnb';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { LNB_LIST } from '../../utils/common'
 
-const Lnb = (props) => {
+const Lnb = ({list}) => {
+
+    const ref = useRef();
+    
 
     let [label, setLabel] = useState(false);
 
-    const [lnbList] = LNB_LIST()
-
-    console.log(lnbList[0])
-
-    
     return (
         
-        <LnbStyle.LnbArea className={label ? 'active' : undefined}>
+        <LnbStyle.LnbArea className={label ? 'active' : undefined} ref={ref}>
             <LnbStyle.LnbInner>
                 <LnbStyle.LnbList className="cScrollY">
                     
-                    {
-                        lnbList.map((i, index) => {
-
-                            return (
-                                
-                                i.listItem.map((j, index) => {
-                                    // console.log(j)
-                                    return (
-                                        <LnbStyle.LnbItem key={j}>
-                                            {j}
-                                        {/* <Link to={} /> */}
+                        {
+                            list.map(({lnbItem, lnbLink}, index) => {
+                                return (
+                                    <LnbStyle.LnbItem key={index} >
+                                        <Link to={lnbLink} target="_blank" rel="noopener noreferrer" alt={index + " 새창으로 열기"}>
+                                            {lnbItem}
+                                        </Link>
                                     </LnbStyle.LnbItem>
-                                    )
-                                
-                                })
-                            )
-                        })
-                    }
+                                )
+                            })
+                        }
 
+                    
 
                 </LnbStyle.LnbList>
             </LnbStyle.LnbInner>
