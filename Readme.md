@@ -9,4 +9,4 @@ GSAP : 3.12.2v<br />
 
 ## React Project The
 
-<a href="https://j45bongsik.github.io/J45-Portfolio/build/html/main.html" target="_blank">The - 바로가기</a>
+<a href="pjt-react-the.vercel.app" target="_blank">The - 바로가기</a>
