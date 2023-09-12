@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import '../assets/fonts/_Fonts.scss'
 
-export const KakaoStyle = {
+export const MapStyle = {
     mapArea:styled.article `
         width: 100%; height: 100%; max-height: 600px;
         max-width: 1920px;

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Lnb = ({list}) => {
 
     const ref = useRef();
+
     
 
     let [label, setLabel] = useState(false);
@@ -20,7 +21,9 @@ const Lnb = ({list}) => {
                             list.map(({lnbItem, lnbLink}, index) => {
                                 return (
                                     <LnbStyle.LnbItem key={index} >
-                                        <Link to={lnbLink} target="_blank" rel="noopener noreferrer" alt={index + " 새창으로 열기"}>
+                                        <Link to={lnbLink} target="_blank" rel="noopener noreferrer" alt={index + " 새창으로 열기"}
+                
+                                        >
                                             {lnbItem}
                                         </Link>
                                     </LnbStyle.LnbItem>

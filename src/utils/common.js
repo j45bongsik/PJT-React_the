@@ -66,23 +66,22 @@ export const MENU_LIST = () => {
         {
             id: 0,
             name: 'coffee',
-            link : '/coffee/info',
+            link : '/coffee/01',
             dep02: [
                 {name: 'dep02-01', link: 'coffee/01'},
                 {name: 'dep02-02', link: 'coffee/02'},
                 {name: 'dep02-03', link: 'coffee/03'}
             ],
             lnb: [
-                {
-                    lnbItem: ["cf01", "cf02", "cf03"], 
-                    lnbLink: ["coffee/01", "coffee/02", "coffee/03"]
-                }
+                {lnbItem: "cf01", lnbLink: "coffee/01"},
+                {lnbItem: "cf02", lnbLink: "coffee/02"},
+                {lnbItem: "cf03", lnbLink: "coffee/03"},
             ]
         },
         {
             id: 1,
             name: 'food',
-            link : '/food/info',
+            link : '/food/01',
             dep02: [
                 {name: 'dep02-01', link: 'food/01'},
                 {name: 'dep02-02', link: 'food/02'},
@@ -90,16 +89,17 @@ export const MENU_LIST = () => {
                 {name: 'dep02-04', link: 'food/04'}
             ],
             lnb: [
-                {
-                    lnbItem: ["fd01", "fd02", "fd03", "fd04"], 
-                    lnbLink: ["food/01", "food/02", "food/03", "food/04"]
-                }
+                {lnbItem: "fd01", lnbLink: "food/01"},
+                {lnbItem: "fd02", lnbLink: "food/02"},
+                {lnbItem: "fd03", lnbLink: "food/03"},
+                {lnbItem: "fd04", lnbLink: "food/04"},
+
             ]
         },
         {
             id: 2,
             name: 'etc',
-            link : '/etc/info',
+            link : '/etc/01',
             dep02: [
                 {name: 'dep02-01', link: 'etc/01'},
                 {name: 'dep02-02', link: 'etc/02'},
@@ -107,10 +107,12 @@ export const MENU_LIST = () => {
                 {name: 'dep02-04', link: 'etc/04'}
             ],
             lnb: [
-                {
-                    lnbItem: ["etc01", "etc02", "etc03", "etc04", "etc05"], 
-                    lnbLink: ["etc/01", "etc/02", "etc/03", "etc/04", "etc/05"]
-                }
+                {lnbItem: "etc01", lnbLink: "etc/01"},
+                {lnbItem: "etc02", lnbLink: "etc/02"},
+                {lnbItem: "etc03", lnbLink: "etc/03"},
+                {lnbItem: "etc04", lnbLink: "etc/04"},
+                {lnbItem: "etc05", lnbLink: "etc/05"},
+
             ]
             
         },

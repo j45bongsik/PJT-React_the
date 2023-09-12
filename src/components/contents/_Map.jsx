@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { KakaoStyle } from '../../styles/Kakao';
+import { MapStyle } from '../../styles/Map';
 import { InputArea, CheckStyle } from '../../styles/Form';
 import CkdLabel from './_CkdLabel'
 
 const { kakao } = window;
 
-const Kakao = ((props) => {
+const Map = ((props) => {
 
     useEffect(() => {
 
@@ -77,24 +77,24 @@ const Kakao = ((props) => {
 
     return (
 
-        <KakaoStyle.mapArea>
-            <KakaoStyle.mapHeader>
+        <MapStyle.mapArea>
+            <MapStyle.mapHeader>
                 <InputArea>
                     <CkdLabel label={'전체보기'} id={'allView'} name={'chk01'}></CkdLabel>
                     <CkdLabel label={'보기01'} id={'coffee'} name={'chk02'}></CkdLabel>
                     <CkdLabel label={'보기02'} id={'food'} name={'chk03'}></CkdLabel>
                 </InputArea>
-            </KakaoStyle.mapHeader>
-            <KakaoStyle.mapCont>
+            </MapStyle.mapHeader>
+            <MapStyle.mapCont>
 
                 <div id="map"></div>
                 
-            </KakaoStyle.mapCont>
-        </KakaoStyle.mapArea>
+            </MapStyle.mapCont>
+        </MapStyle.mapArea>
 
         
 
     )
 })
 
-export default Kakao;
+export default Map;
